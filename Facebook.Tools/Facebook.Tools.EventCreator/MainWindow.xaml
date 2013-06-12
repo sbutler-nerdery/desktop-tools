@@ -1,0 +1,20 @@
+﻿<Window x:Class="Facebook.Tools.EventCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Loaded="MainWindow_OnLoaded"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Orientation="Vertical">
+        <Label Content="Page Id"></Label>
+        <TextBox Name="PageId" Text="491917194219833"></TextBox>
+        <Label Content="Event Data"/>
+        <TextBox Name="Data" Height="141" AcceptsReturn="True" TextWrapping="Wrap" Text="Enter CSV event data here"/>
+        <Button Name="CreateEvents" Content="Create Events" Click="CreateEvents_OnClick"/>
+        <GroupBox Header="New Event Links">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel Name="ResultLinks">
+
+                </StackPanel>
+            </ScrollViewer>
+        </GroupBox>
+    </StackPanel>
+</Window>
