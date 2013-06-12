@@ -137,24 +137,23 @@ namespace Facebook.Tools.EventCreator
                         parameters.Add("name", name);
                         parameters.Add("start_time", date);
                         var postUrl = string.Format("/{0}/events", _PageId);
-                        var json = fb.Post(postUrl, parameters).ToString();
                         var state = new WorkerState();
 
-                        if (json.Contains("error"))
+                        try
                         {
-                            var root = JObject.Parse(json);
-                            state.Error = true;
-                            state.Name = string.Format("Error creating event '{0}' --> ", name) + root["error"]["message"];
-
-                            thisWorker.ReportProgress(1, state);
-                        }
-                        else
-                        {
+                            var json = fb.Post(postUrl, parameters).ToString();
                             var root = JObject.Parse(json);
                             var eventId = root["id"];
                             state.Error = false;
                             state.Name = name;
                             state.Id = eventId.ToString();
+
+                            thisWorker.ReportProgress(1, state);
+                        }
+                        catch (Exception ex)
+                        {
+                            state.Error = true;
+                            state.Name = string.Format("Error creating event '{0}' --> ", name) + ex.Message;
 
                             thisWorker.ReportProgress(1, state);
                         }
