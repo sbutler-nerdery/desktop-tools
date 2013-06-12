@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,8 +76,8 @@ namespace Facebook.Tools.EventCreator
 
         private void BrowseForFiles_OnClick(object sender, RoutedEventArgs e)
         {
-            var dialog = new OpenFileDialog();
-            
+            var dialog = new OpenFileDialog {Filter = "CSV Files (*.csv)|*.csv"};
+
             if (dialog.ShowDialog() == true)
             {
                 CsvFile.Text = dialog.FileName;
@@ -84,56 +86,120 @@ namespace Facebook.Tools.EventCreator
 
         private void CreateEvents_OnClick(object sender, RoutedEventArgs e)
         {
+            //Open the specified file and get the contents
+            try
+            {
+                using (var fs = System.IO.File.OpenRead(CsvFile.Text))
+                {
+                    using (var reader = new StreamReader(fs))
+                    {
+                        _Data = reader.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("I tried reading the contents of the file and I couldn't.", "Doh!", MessageBoxButton.OK,
+                                MessageBoxImage.Error);
+
+                return;
+            }
+
             if (_Data == "")
             {
-                MessageBox.Show("I can't create events out of nothing! Please enter some CVS event values.", "Doh!", MessageBoxButton.OK,
+                MessageBox.Show("I can't create events out of nothing! The contents of the specified file appear to be blank.", "Doh!", MessageBoxButton.OK,
                                 MessageBoxImage.Exclamation);
                 return;
             }
 
             var events = _Data.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
-            foreach (var item in events)
-            {
-                //split by commas
-                var csvValues = item.Split(',');
-                var name = csvValues[0];
-                var date = csvValues[1];
+            Progress.Maximum = events.Length;
+            Progress.Value = 0;
 
-                var fb = new FacebookClient();
-                var parameters = new Dictionary<string, object>();
-                parameters.Add("access_token", _PageAccessToken);
-                parameters.Add("name", name);
-                parameters.Add("start_time", date);
-                var postUrl = string.Format("/{0}/events", _PageId);
-                var json = fb.Post(postUrl, parameters).ToString();
-
-                if (json.Contains("error"))
+            var worker = new BackgroundWorker();
+            worker.WorkerSupportsCancellation = true;
+            worker.WorkerReportsProgress = true;
+            worker.DoWork += (o, wArgs) =>
                 {
-                    var errorLabel = new Label();
-                    var root = JObject.Parse(json);
-                    errorLabel.Content = string.Format("Error creating event '{0}' --> ", name) + root["error"]["message"];
-                    ResultLinks.Children.Add(errorLabel);
-                }
-                else
-                {
-                    var root = JObject.Parse(json);
-                    var eventId = root["id"];
+                    var thisWorker = o as BackgroundWorker;
 
-                    var linkButton = new Button();
-                    linkButton.Width = 100;
-                    linkButton.Content = name;
-                    linkButton.HorizontalAlignment = HorizontalAlignment.Left;
-                    linkButton.Click += (s, args) =>
+                    foreach (var item in events)
                     {
-                        var eventUrl = string.Format("https://www.facebook.com/events/{0}/", eventId);
+                        //split by commas
+                        var csvValues = item.Split(',');
+                        var name = csvValues[0];
+                        var date = csvValues[1];
 
-                        //Open a browser window with the event URL
-                        System.Diagnostics.Process.Start(eventUrl);
-                    };
-                    ResultLinks.Children.Add(linkButton);
-                }
-            }
+                        var fb = new FacebookClient();
+                        var parameters = new Dictionary<string, object>();
+                        parameters.Add("access_token", _PageAccessToken);
+                        parameters.Add("name", name);
+                        parameters.Add("start_time", date);
+                        var postUrl = string.Format("/{0}/events", _PageId);
+                        var json = fb.Post(postUrl, parameters).ToString();
+                        var state = new WorkerState();
+
+                        if (json.Contains("error"))
+                        {
+                            var root = JObject.Parse(json);
+                            state.Error = true;
+                            state.Name = string.Format("Error creating event '{0}' --> ", name) + root["error"]["message"];
+
+                            thisWorker.ReportProgress(1, state);
+                        }
+                        else
+                        {
+                            var root = JObject.Parse(json);
+                            var eventId = root["id"];
+                            state.Error = false;
+                            state.Name = name;
+                            state.Id = eventId.ToString();
+
+                            thisWorker.ReportProgress(1, state);
+                        }
+                    }
+                };
+
+            worker.ProgressChanged += (s, wArgs) =>
+                {
+                    Progress.Value += 1;
+
+                    var state = wArgs.UserState as WorkerState;
+
+                    if (state.Error)
+                    {
+                        var errorLabel = new Label();
+                        errorLabel.Content = state.Name;
+                        ResultLinks.Children.Add(errorLabel);
+                    }
+                    else
+                    {
+                        var linkButton = new Button();
+                        linkButton.Width = 100;
+                        linkButton.Content = state.Name;
+                        linkButton.HorizontalAlignment = HorizontalAlignment.Left;
+                        linkButton.Click += (snd, args) =>
+                        {
+                            var eventUrl = string.Format("https://www.facebook.com/events/{0}/", state.Id);
+
+                            //Open a browser window with the event URL
+                            System.Diagnostics.Process.Start(eventUrl);
+                        };
+                        ResultLinks.Children.Add(linkButton);                        
+                    }
+                };
+
+            worker.RunWorkerCompleted += (s, wArgs) =>
+                {
+                    Loading.Visibility = Visibility.Collapsed;
+                    NewLinks.Visibility = Visibility.Visible;
+                };
+
+            Loading.Visibility = Visibility.Visible;
+            NewLinks.Visibility = Visibility.Collapsed;
+
+            worker.RunWorkerAsync();
         }
 
         #endregion
@@ -144,7 +210,6 @@ namespace Facebook.Tools.EventCreator
         {
             Close();
         }
-
 
         private void Settings_OnClick(object sender, RoutedEventArgs e)
         {
@@ -182,6 +247,17 @@ namespace Facebook.Tools.EventCreator
             _AppId = appId;
             _PageId = pageId;
             _DomainUrl = domainUrl;
+        }
+
+        #endregion
+
+        #region Helpers
+
+        public class WorkerState
+        {
+            public string Name { get; set; }
+            public string Id { get; set; }
+            public bool Error { get; set; }
         }
 
         #endregion

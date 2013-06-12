@@ -28,7 +28,11 @@
             <Button Name="BrowseForFiles" Grid.Column="1" Margin="5 0 0 0" Click="BrowseForFiles_OnClick">Browse</Button>
         </Grid>
         <Button Name="CreateEvents" Grid.Row="2" Margin="10 5 10 5" Content="Create Events" Click="CreateEvents_OnClick"/>
-        <GroupBox Header="New Event Links" Grid.Row="3" Margin="10 0 10 10">
+        <DockPanel Grid.Row="3" Margin="10 0 10 10" Name="Loading" Height="25" Visibility="Collapsed">
+            <Label DockPanel.Dock="Left">Working</Label>
+            <ProgressBar DockPanel.Dock="Right" Name="Progress" />
+        </DockPanel>
+        <GroupBox Header="New Event Links" Grid.Row="3" Margin="10 0 10 10" Name="NewLinks">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                 <StackPanel Name="ResultLinks">
 
