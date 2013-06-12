@@ -5,11 +5,14 @@ C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Newtonsoft.Json.dll
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Facebook.xml
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Newtonsoft.Json.xml
-C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.csprojResolveAssemblyReference.cache
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Themes\DefaultDictionary.baml
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Login.baml
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\MainWindow.baml
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Settings.baml
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\App.baml
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Login.g.cs
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\MainWindow.g.cs
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Settings.g.cs
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\App.g.cs
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator_MarkupCompile.cache
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.g.resources

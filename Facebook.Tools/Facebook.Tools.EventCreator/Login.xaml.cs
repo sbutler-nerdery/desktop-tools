@@ -20,12 +20,18 @@ namespace Facebook.Tools.EventCreator
     /// </summary>
     public partial class Login : Window
     {
-        public Action<string> Callback { get; set; }
-        public string LoginUrl { get; set; }
+        private Action<string> _Callback;
+        private string _LoginUrl;
 
         public Login()
         {
             InitializeComponent();
+        }
+
+        public Login(Action<string> callback, string loginUrl) : this()
+        {
+            _Callback = callback;
+            _LoginUrl = loginUrl;
         }
 
         private void Browser_OnNavigated(object sender, NavigationEventArgs e)
@@ -34,14 +40,14 @@ namespace Facebook.Tools.EventCreator
             if (url.Contains("#access_token"))
             {
                 var token = url.Split('#')[1].Split('&')[0].Split('=')[1];
-                Callback(token);
+                _Callback(token);
                 Hide();
             }
         }
 
         private void Login_OnLoaded(object sender, RoutedEventArgs e)
         {
-            Browser.Navigate(LoginUrl);
+            Browser.Navigate(_LoginUrl);
         }
     }
 }

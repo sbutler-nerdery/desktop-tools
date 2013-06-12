@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
 
 namespace Facebook.Tools.EventCreator
@@ -21,18 +23,39 @@ namespace Facebook.Tools.EventCreator
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        #region Fields
+
         private string _AccessToken;
         private string _PageAccessToken;
-        private string _PageId = "491917194219833";
+        private string _DomainUrl;
+        private string _AppId;
+        private string _PageId;
+        private string _Data;
         private Login _LoginForm;
+
+        #endregion
+
+        #region Constructors
 
         public MainWindow()
         {
             InitializeComponent();
-            _LoginForm = new Login();
-            _LoginForm.LoginUrl = "https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event&redirect_uri=http://localhost:8080/somepage.html&response_type=token";
-            _LoginForm.Callback = Callback;
+
+            //Get setting from the app config
+            _AppId = Properties.Settings.Default.AppId;
+            _DomainUrl = Properties.Settings.Default.DomainUrl;
+            _PageId = Properties.Settings.Default.PageId;
+
+            const string urlTemplate = "https://www.facebook.com/dialog/oauth?client_id={0}&scope=create_event&redirect_uri={1}/somepage.html&response_type=token";
+            _LoginForm = new Login(LoginCallback, string.Format(urlTemplate, _AppId, _DomainUrl));
         }
+
+        #endregion
+
+        #region Event Handlers
+
+        #region Window
 
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
@@ -40,42 +63,35 @@ namespace Facebook.Tools.EventCreator
             _LoginForm.ShowDialog();
         }
 
-        private void Callback(string token)
+        private void MainWindow_OnClosed(object sender, EventArgs e)
         {
-            _AccessToken = token;
+            Application.Current.Shutdown();
+        }
 
-            var fb = new FacebookClient(token);
-            var json = fb.Get("/me/accounts/").ToString();
-            var root = JObject.Parse(json);
+        #endregion
 
-            var pageAccessToken =
-                root["data"].Children().FirstOrDefault(x => x["id"].ToString() == _PageId)["access_token"].ToString();
+        #region Buttons
 
-            if (!string.IsNullOrEmpty(pageAccessToken))
+        private void BrowseForFiles_OnClick(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog();
+            
+            if (dialog.ShowDialog() == true)
             {
-                _PageAccessToken = pageAccessToken;
+                CsvFile.Text = dialog.FileName;
             }
-            else
-                MessageBox.Show("Unable to find the specified Page ID! I can't create any events for this.", "Doh!", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void CreateEvents_OnClick(object sender, RoutedEventArgs e)
         {
-            if (PageId.Text == "")
-            {
-                MessageBox.Show("You must enter a page id to create events.", "Doh!", MessageBoxButton.OK,
-                                MessageBoxImage.Exclamation);
-                return;
-            }
-
-            if (Data.Text == "")
+            if (_Data == "")
             {
                 MessageBox.Show("I can't create events out of nothing! Please enter some CVS event values.", "Doh!", MessageBoxButton.OK,
                                 MessageBoxImage.Exclamation);
                 return;
             }
 
-            var events = Data.Text.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var events = _Data.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var item in events)
             {
@@ -119,5 +135,55 @@ namespace Facebook.Tools.EventCreator
                 }
             }
         }
+
+        #endregion
+
+        #region MenuItems
+
+        private void Close_OnClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+
+        private void Settings_OnClick(object sender, RoutedEventArgs e)
+        {
+            var settingsForm = new Settings(SaveSettingsCallback);
+            settingsForm.ShowDialog();
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Methods
+
+        private void LoginCallback(string token)
+        {
+            _AccessToken = token;
+
+            var fb = new FacebookClient(token);
+            var json = fb.Get("/me/accounts/").ToString();
+            var root = JObject.Parse(json);
+
+            var pageAccessToken =
+                root["data"].Children().FirstOrDefault(x => x["id"].ToString() == _PageId)["access_token"].ToString();
+
+            if (!string.IsNullOrEmpty(pageAccessToken))
+            {
+                _PageAccessToken = pageAccessToken;
+            }
+            else
+                MessageBox.Show("Unable to find the specified Page ID! I can't create any events for this.", "Doh!", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void SaveSettingsCallback(string appId, string pageId, string domainUrl)
+        {
+            _AppId = appId;
+            _PageId = pageId;
+            _DomainUrl = domainUrl;
+        }
+
+        #endregion
     }
 }

@@ -1,7 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Facebook.Tools.EventCreator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">324253151015060</Value>
+    </Setting>
+    <Setting Name="PageId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">491917194219833</Value>
+    </Setting>
+    <Setting Name="DomainUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost:8080</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
