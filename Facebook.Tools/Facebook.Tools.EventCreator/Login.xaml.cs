@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,24 +41,45 @@ namespace Facebook.Tools.EventCreator
             _LoginUrl = loginUrl;
         }
 
+        private void ShowAuthenticatingMode()
+        {
+            Loader.Visibility = Visibility.Visible;
+            Browser.Visibility = Visibility.Collapsed;
+            Title = "Authenticating...";            
+        }
+
         #endregion
 
         #region Event Handlers
 
+        private void Login_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            ShowAuthenticatingMode();
+            Browser.Navigate(_LoginUrl);
+        }
+
         private void Browser_OnNavigated(object sender, NavigationEventArgs e)
         {
-            var url = e.Uri.ToString();
+            var url = e.Uri.ToString(); 
+
             if (url.Contains("#access_token"))
             {
                 var token = url.Split('#')[1].Split('&')[0].Split('=')[1];
+
                 _Callback(token);
                 Hide();
             }
+            else
+            {
+                Title = "Login";
+                Loader.Visibility = Visibility.Collapsed;
+                Browser.Visibility = Visibility.Visible;         
+            }
         }
 
-        private void Login_OnLoaded(object sender, RoutedEventArgs e)
+        private void Browser_OnNavigating(object sender, NavigatingCancelEventArgs e)
         {
-            Browser.Navigate(_LoginUrl);
+            ShowAuthenticatingMode();
         }
 
         #endregion
