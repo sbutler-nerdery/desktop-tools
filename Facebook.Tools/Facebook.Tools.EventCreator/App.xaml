@@ -6,7 +6,8 @@
          <ResourceDictionary>
              <ResourceDictionary.MergedDictionaries>
                  <ResourceDictionary Source="Themes/DefaultDictionary.xaml"></ResourceDictionary>
-             </ResourceDictionary.MergedDictionaries>
+                 <ResourceDictionary Source="/PresentationFramework.Aero;component/themes/Aero.NormalColor.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
          </ResourceDictionary>
     </Application.Resources>
 </Application>
