@@ -34,6 +34,7 @@ namespace Facebook.Tools.EventCreator
 
         #region Fields
 
+        private const string URL_TEMPLATE = "https://www.facebook.com/dialog/oauth?client_id={0}&scope=create_event&redirect_uri={1}/somepage.html&response_type=token";
         private string _AccessToken;
         private string _PageAccessToken;
         private string _DomainUrl;
@@ -49,14 +50,6 @@ namespace Facebook.Tools.EventCreator
         public MainWindow()
         {
             InitializeComponent();
-
-            //Get setting from the app config
-            _AppId = Properties.Settings.Default.AppId;
-            _DomainUrl = Properties.Settings.Default.DomainUrl;
-            _PageId = Properties.Settings.Default.PageId;
-
-            const string urlTemplate = "https://www.facebook.com/dialog/oauth?client_id={0}&scope=create_event&redirect_uri={1}/somepage.html&response_type=token";
-            _LoginForm = new Login(LoginCallback, string.Format(urlTemplate, _AppId, _DomainUrl));
         }
 
         #endregion
@@ -67,12 +60,25 @@ namespace Facebook.Tools.EventCreator
 
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
-            //Make sure that the user is logged in.
-            _LoginForm.ShowDialog();
-            
-            //Plugin the view model
-            var viewModel = new MainWindowViewModel { CsvFileLocation = string.Empty };
-            DataContext = viewModel;
+            try
+            {
+                //Get setting from the app config
+                _AppId = Properties.Settings.Default.AppId;
+                _DomainUrl = Properties.Settings.Default.DomainUrl;
+                _PageId = Properties.Settings.Default.PageId;
+                _LoginForm = new Login(LoginCallback, string.Format(URL_TEMPLATE, _AppId, _DomainUrl));
+
+                //Plugin the view model
+                var viewModel = new MainWindowViewModel { CsvFileLocation = string.Empty };
+                DataContext = viewModel;
+
+                //Make sure that the user is logged in.
+                _LoginForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
         }
 
         private void MainWindow_OnClosed(object sender, EventArgs e)
@@ -164,6 +170,7 @@ namespace Facebook.Tools.EventCreator
             {
                 MessageBox.Show("I tried reading the contents of the file and I couldn't.", "Doh!", MessageBoxButton.OK,
                                 MessageBoxImage.Error);
+                Logger.LogInfo(ex.Message + Environment.NewLine + ex.StackTrace);
                 return;
             }
 
@@ -221,6 +228,7 @@ namespace Facebook.Tools.EventCreator
                             state.Name = string.Format("Error creating event '{0}' --> ", name) + ex.Message;
 
                             thisWorker.ReportProgress(1, state);
+                            Logger.LogInfo(ex.Message + Environment.NewLine + ex.StackTrace);
                         }
                     }
                 };

@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Loaded="MainWindow_OnLoaded"
         Closed="MainWindow_OnClosed"
-        Title="Create Facebook Page Events" Height="350" Width="525">
+        WindowStartupLocation="CenterScreen"
+        Title="Create Facebook Page Events" Height="600" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -21,8 +22,8 @@
         </Grid>
         <Grid Grid.Row="1" Margin="10 10 10 0" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="7*"/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
             </Grid.ColumnDefinitions>
             <TextBox Name="ImportFilePath" Text="{Binding Path=CsvFileLocation, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" />
             <Button Name="BrowseForFiles" Grid.Column="1" Margin="5 0 0 0" Click="BrowseForFiles_OnClick">Browse</Button>

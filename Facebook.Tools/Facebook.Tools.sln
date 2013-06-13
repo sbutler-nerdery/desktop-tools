@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Tools.EventCreator", "Facebook.Tools.EventCreator\Facebook.Tools.EventCreator.csproj", "{FDD47379-390E-49BF-AB7B-9D45AA72AA47}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Facebook.Tools.Install", "Facebook.Tools.Install\Facebook.Tools.Install.isproj", "{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}"
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Facebook.Tools.Install", "Facebook.Tools.Install\Facebook.Tools.Install.isproj", "{D73B324B-990F-484E-95C8-4D10BFF39785}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FDD47379-390E-49BF-AB7B-9D45AA72AA47} = {FDD47379-390E-49BF-AB7B-9D45AA72AA47}
 	EndProjectSection
@@ -27,16 +27,16 @@ Global
 		{FDD47379-390E-49BF-AB7B-9D45AA72AA47}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FDD47379-390E-49BF-AB7B-9D45AA72AA47}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{FDD47379-390E-49BF-AB7B-9D45AA72AA47}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.CD_ROM|Any CPU.Build.0 = CD_ROM
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.Debug|Any CPU.ActiveCfg = DVD-5
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.Debug|Any CPU.Build.0 = DVD-5
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.DVD-5|Any CPU.ActiveCfg = DVD-5
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.DVD-5|Any CPU.Build.0 = DVD-5
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.Release|Any CPU.ActiveCfg = SingleImage
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.Release|Any CPU.Build.0 = SingleImage
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.SingleImage|Any CPU.ActiveCfg = SingleImage
-		{6025BA2D-1FA1-42FD-AE87-ACF461EFB42E}.SingleImage|Any CPU.Build.0 = SingleImage
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.Debug|Any CPU.ActiveCfg = DVD-5
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.Debug|Any CPU.Build.0 = DVD-5
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.DVD-5|Any CPU.Build.0 = DVD-5
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.Release|Any CPU.ActiveCfg = SingleImage
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.Release|Any CPU.Build.0 = SingleImage
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{D73B324B-990F-484E-95C8-4D10BFF39785}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

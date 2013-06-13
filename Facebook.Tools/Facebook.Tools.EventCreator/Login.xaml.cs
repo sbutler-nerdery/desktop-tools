@@ -35,7 +35,8 @@ namespace Facebook.Tools.EventCreator
             InitializeComponent();
         }
 
-        public Login(Action<string> callback, string loginUrl) : this()
+        public Login(Action<string> callback, string loginUrl)
+            : this()
         {
             _Callback = callback;
             _LoginUrl = loginUrl;
@@ -45,7 +46,7 @@ namespace Facebook.Tools.EventCreator
         {
             Loader.Visibility = Visibility.Visible;
             Browser.Visibility = Visibility.Collapsed;
-            Title = "Authenticating...";            
+            Title = "Authenticating...";
         }
 
         #endregion
@@ -60,7 +61,7 @@ namespace Facebook.Tools.EventCreator
 
         private void Browser_OnNavigated(object sender, NavigationEventArgs e)
         {
-            var url = e.Uri.ToString(); 
+            var url = e.Uri.ToString();
 
             if (url.Contains("#access_token"))
             {
@@ -73,7 +74,7 @@ namespace Facebook.Tools.EventCreator
             {
                 Title = "Login";
                 Loader.Visibility = Visibility.Collapsed;
-                Browser.Visibility = Visibility.Visible;         
+                Browser.Visibility = Visibility.Visible;
             }
         }
 

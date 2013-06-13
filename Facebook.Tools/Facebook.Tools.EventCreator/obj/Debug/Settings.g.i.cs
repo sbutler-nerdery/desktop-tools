@@ -91,7 +91,7 @@ namespace Facebook.Tools.EventCreator {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EventCreator;component/settings.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Facebook.Tools.EventCreator;component/settings.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\Settings.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
