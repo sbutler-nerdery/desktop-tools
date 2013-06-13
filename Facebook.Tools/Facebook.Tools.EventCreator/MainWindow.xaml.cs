@@ -15,8 +15,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Facebook.Tools.EventCreator.ViewModels;
 using Microsoft.Win32;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
 using Newtonsoft.Json.Linq;
+using HorizontalAlignment = System.Windows.HorizontalAlignment;
+using VerticalAlignment = System.Windows.VerticalAlignment;
 
 namespace Facebook.Tools.EventCreator
 {
@@ -63,6 +69,10 @@ namespace Facebook.Tools.EventCreator
         {
             //Make sure that the user is logged in.
             _LoginForm.ShowDialog();
+            
+            //Plugin the view model
+            var viewModel = new MainWindowViewModel { CsvFileLocation = string.Empty };
+            DataContext = viewModel;
         }
 
         private void MainWindow_OnClosed(object sender, EventArgs e)
@@ -76,11 +86,15 @@ namespace Facebook.Tools.EventCreator
 
         private void BrowseForFiles_OnClick(object sender, RoutedEventArgs e)
         {
-            var dialog = new OpenFileDialog {Filter = "CSV Files (*.csv)|*.csv"};
+            var dialog = new OpenFileDialog
+                {
+                    Filter = "Excel Files (*.xlsx)|*.xlsx|CSV Files (*.csv)|*.csv",
+                    FilterIndex = 1
+                };
 
             if (dialog.ShowDialog() == true)
             {
-                CsvFile.Text = dialog.FileName;
+                ImportFilePath.Text = dialog.FileName;
             }
         }
 
@@ -89,19 +103,67 @@ namespace Facebook.Tools.EventCreator
             //Open the specified file and get the contents
             try
             {
-                using (var fs = System.IO.File.OpenRead(CsvFile.Text))
+                var file = new FileInfo(ImportFilePath.Text);
+
+                if (file.Extension == ".csv")
                 {
-                    using (var reader = new StreamReader(fs))
+                    using (var fs = File.OpenRead(ImportFilePath.Text))
                     {
-                        _Data = reader.ReadToEnd();
+                        using (var reader = new StreamReader(fs))
+                        {
+                            _Data = reader.ReadToEnd();
+                        }
                     }
+                }
+                else if (file.Extension == ".xlsx")
+                {
+                    XSSFWorkbook workbook;
+
+                    using (var fs = File.OpenRead(ImportFilePath.Text))
+                    {
+                        workbook = new XSSFWorkbook(fs);
+                    }
+
+                    var sheet = workbook.GetSheetAt(0);
+                    var tempData = "";
+
+                    //Assume that the first row has the names of the columns
+                    for (int i = 1; i <= sheet.LastRowNum; i++)
+                    {
+                        if (sheet.GetRow(i) != null)
+                        {
+                            var row = sheet.GetRow(i);
+                            var rowString = "";
+
+                            for (int j = 0; j < row.LastCellNum; j++)
+                            {
+                                string cellData = "";
+                                var cell = row.Cells[j];
+
+                                //This is the data type for date? Oh well... 
+                                if(cell.CellType == CellType.NUMERIC)
+                                {
+                                    var dateTime = cell.DateCellValue;
+                                    cellData = dateTime.ToString("yyyy-MM-ddTHH:mm:ss-0500");
+                                }
+                                else
+                                    cellData = row.Cells[j].StringCellValue;
+
+                                rowString += (rowString == "") ? cellData : "," + cellData;
+                            }
+
+                            rowString += Environment.NewLine;
+                            tempData += rowString;
+                        }
+                    }
+
+                    _Data = tempData;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("I tried reading the contents of the file and I couldn't.", "Doh!", MessageBoxButton.OK,
                                 MessageBoxImage.Error);
-
                 return;
             }
 
@@ -113,6 +175,9 @@ namespace Facebook.Tools.EventCreator
             }
 
             var events = _Data.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            //Clear the old event links..
+            ResultLinks.Children.Clear();
 
             Progress.Maximum = events.Length;
             Progress.Value = 0;
@@ -169,14 +234,15 @@ namespace Facebook.Tools.EventCreator
                     if (state.Error)
                     {
                         var errorLabel = new Label();
+                        errorLabel.Margin = new Thickness(0, 2, 0, 2);
                         errorLabel.Content = state.Name;
                         ResultLinks.Children.Add(errorLabel);
                     }
                     else
                     {
                         var linkButton = new Button();
-                        linkButton.Width = 100;
-                        linkButton.Content = state.Name;
+                        linkButton.Margin = new Thickness(0, 2, 0, 2);
+                        linkButton.Content = string.Format("Open event '{0}'", state.Name);
                         linkButton.HorizontalAlignment = HorizontalAlignment.Left;
                         linkButton.Click += (snd, args) =>
                         {
@@ -193,6 +259,7 @@ namespace Facebook.Tools.EventCreator
                 {
                     Loading.Visibility = Visibility.Collapsed;
                     NewLinks.Visibility = Visibility.Visible;
+                    ImportFilePath.Text = string.Empty;
                 };
 
             Loading.Visibility = Visibility.Visible;

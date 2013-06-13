@@ -107,7 +107,7 @@ namespace Facebook.Tools.EventCreator.ViewModels
 
                 if (columnName == "PageId")
                 {
-                    if (string.IsNullOrEmpty(AppId))
+                    if (string.IsNullOrEmpty(PageId))
                     {
                         result = "The Facebook PageId cannot be empty";
                         isValid = false;

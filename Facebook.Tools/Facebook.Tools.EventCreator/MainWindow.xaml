@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Loaded="MainWindow_OnLoaded"
         Closed="MainWindow_OnClosed"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Create Facebook Events" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -13,10 +13,10 @@
         </Grid.RowDefinitions>
         <Grid>
             <Menu Name="MainMenu">
-                <MenuItem Name="File" Header="_File" Click="Settings_OnClick">
-                    <MenuItem Name="Close" Header="_Close" Click="Close_OnClick"></MenuItem>
+                <MenuItem Name="FileMenu" Header="_File" Click="Settings_OnClick">
+                    <MenuItem Name="CloseMenu" Header="_Close" Click="Close_OnClick"></MenuItem>
                 </MenuItem>
-                <MenuItem Name="Settings" Header="Settings" Click="Settings_OnClick"/>
+                <MenuItem Name="SettingsMenu" Header="Settings" Click="Settings_OnClick"/>
             </Menu>
         </Grid>
         <Grid Grid.Row="1" Margin="10 10 10 0" >
@@ -24,10 +24,10 @@
                 <ColumnDefinition Width="7*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <TextBox Name="CsvFile" />
+            <TextBox Name="ImportFilePath" Text="{Binding Path=CsvFileLocation, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" />
             <Button Name="BrowseForFiles" Grid.Column="1" Margin="5 0 0 0" Click="BrowseForFiles_OnClick">Browse</Button>
         </Grid>
-        <Button Name="CreateEvents" Grid.Row="2" Margin="10 5 10 5" Content="Create Events" Click="CreateEvents_OnClick"/>
+        <Button Name="CreateEvents" Grid.Row="2" Margin="10 5 10 5" Content="Create Events" IsEnabled="{Binding Path=CanCreateEvents}" Click="CreateEvents_OnClick"/>
         <DockPanel Grid.Row="3" Margin="10 0 10 10" Name="Loading" Height="25" Visibility="Collapsed">
             <Label DockPanel.Dock="Left">Working</Label>
             <ProgressBar DockPanel.Dock="Right" Name="Progress" />

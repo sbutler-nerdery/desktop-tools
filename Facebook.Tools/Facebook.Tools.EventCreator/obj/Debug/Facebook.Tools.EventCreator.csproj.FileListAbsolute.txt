@@ -21,3 +21,4 @@ C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.exe
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.pdb
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.csprojResolveAssemblyReference.cache
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\NPOI.xml
