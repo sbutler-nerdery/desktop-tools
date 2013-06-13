@@ -20,8 +20,14 @@ namespace Facebook.Tools.EventCreator
     /// </summary>
     public partial class Login : Window
     {
+        #region Fields
+
         private Action<string> _Callback;
         private string _LoginUrl;
+
+        #endregion
+
+        #region Methods
 
         public Login()
         {
@@ -33,6 +39,10 @@ namespace Facebook.Tools.EventCreator
             _Callback = callback;
             _LoginUrl = loginUrl;
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private void Browser_OnNavigated(object sender, NavigationEventArgs e)
         {
@@ -49,5 +59,7 @@ namespace Facebook.Tools.EventCreator
         {
             Browser.Navigate(_LoginUrl);
         }
+
+        #endregion
     }
 }
