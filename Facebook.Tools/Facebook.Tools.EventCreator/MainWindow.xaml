@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Loaded="MainWindow_OnLoaded"
         Closed="MainWindow_OnClosed"
-        Title="Create Facebook Events" Height="350" Width="525">
+        Title="Create Facebook Page Events" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
