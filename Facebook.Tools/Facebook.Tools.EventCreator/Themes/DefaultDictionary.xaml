@@ -32,4 +32,8 @@
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="Margin" Value="20 2 0 2" />
     </Style>
+    <Style x:Key="IndentToolTipContainer" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal" /> 
+        <Setter Property="Margin" Value="20 2 0 2" />
+    </Style>
 </ResourceDictionary>

@@ -93,9 +93,29 @@ namespace Facebook.Tools.EventCreator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CellFormatExample {
+            get {
+                object obj = ResourceManager.GetObject("CellFormatExample", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DomainUrlExample {
             get {
                 object obj = ResourceManager.GetObject("DomainUrlExample", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ExcelHeaderExample {
+            get {
+                object obj = ResourceManager.GetObject("ExcelHeaderExample", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

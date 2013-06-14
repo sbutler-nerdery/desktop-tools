@@ -25,12 +25,49 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
             <TextBox Name="ImportFilePath" Text="{Binding Path=CsvFileLocation, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" />
             <Button Name="BrowseForFiles" Grid.Column="1" Margin="5 0 0 0" Click="BrowseForFiles_OnClick">Browse</Button>
+            <Image Grid.Column="2" Width="25" Height="25" Source="Resources/HelpIcon.jpg"
+               ToolTipService.ShowDuration="100000" ToolTipService.HasDropShadow="True">
+                <Image.ToolTip>
+                    <ToolTip >
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource ToolTipHealine}">File Import</TextBlock>
+                            <TextBlock Style="{StaticResource ToolTipTextBox}">1. Click browse and select either an excel (.xlsx) or CSV (.csv) file.</TextBlock>
+                            <StackPanel Style="{StaticResource IndentToolTipContainer}">
+                                <TextBlock Style="{StaticResource ToolTipTextBox}" FontWeight="Bold">NOTE&#160;</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}">The first row in the excelt file will be ignored</TextBlock>
+                            </StackPanel>
+                            <Image Style="{StaticResource ToolTipImage}" Source="Resources/ExcelHeaderExample.png"></Image>                            
+                            <TextBlock Style="{StaticResource ToolTipTextBox}">2. Enter rows of data in this order: event name, event start time.</TextBlock>
+                            <StackPanel Style="{StaticResource IndentToolTipContainer}">
+                                <TextBlock Style="{StaticResource ToolTipTextBox}" FontWeight="Bold">Excel ONLY&#160;</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}">If you set the cell format to&#160;</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}" FontWeight="Bold">date - dd\mm\yy hh:mm AM</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}">, then the application will take care of the rest</TextBlock>
+                            </StackPanel>
+                            <Image Style="{StaticResource ToolTipImage}" Source="Resources/CellFormatExample.PNG"></Image>
+                            <StackPanel Style="{StaticResource IndentToolTipContainer}">
+                                <TextBlock Style="{StaticResource ToolTipTextBox}" FontWeight="Bold">CSV ONLY&#160;</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}">The date value can either be&#160;</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}" FontWeight="Bold">dd/mm/yyyy&#160;</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}">or&#160;</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}" FontWeight="Bold">dd/mm/yyyyThh:mm:ss-time zone code&#160;</TextBlock>
+                            </StackPanel>
+                            <TextBlock Style="{StaticResource ToolTipTextBox}" Margin="20 0 0 0">The us timezone codes are as follows: 0700 = PT, 0600 = MT, 0500 = CT, 0400 = ET</TextBlock>
+                            <StackPanel Style="{StaticResource IndentToolTipContainer}">
+                                <TextBlock Style="{StaticResource ToolTipTextBox}">Example (Dec 12th 2013 @ 7:30PM - Pacific):&#160;</TextBlock>
+                                <TextBlock Style="{StaticResource ToolTipTextBox}" FontWeight="Bold">12/12/2013T19:30:00-0700</TextBlock>
+                            </StackPanel>                            
+                        </StackPanel>
+                    </ToolTip>
+                </Image.ToolTip>
+            </Image>
         </Grid>
         <Button Name="CreateEvents" Grid.Row="2" Margin="10 5 10 5" Content="Create Events" IsEnabled="{Binding Path=CanCreateEvents}" Click="CreateEvents_OnClick"/>
-        <DockPanel Grid.Row="2" Margin="10 0 10 10" Name="Loading" Height="25" Visibility="Collapsed">
+        <DockPanel Grid.Row="3" Margin="10 0 10 10" Name="Loading" Height="25" Visibility="Collapsed">
             <Label DockPanel.Dock="Left">Working</Label>
             <ProgressBar DockPanel.Dock="Right" Name="Progress" />
         </DockPanel>

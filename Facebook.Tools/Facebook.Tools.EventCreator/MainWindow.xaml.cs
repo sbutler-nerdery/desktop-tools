@@ -173,7 +173,7 @@ namespace Facebook.Tools.EventCreator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("I tried reading the contents of the file and I couldn't.", "Doh!", MessageBoxButton.OK,
+                MessageBox.Show("I tried reading the contents of the file and I couldn't. Do you have it open?", "Doh!", MessageBoxButton.OK,
                                 MessageBoxImage.Error);
                 Logger.LogInfo(ex.Message + Environment.NewLine + ex.StackTrace);
                 return;
