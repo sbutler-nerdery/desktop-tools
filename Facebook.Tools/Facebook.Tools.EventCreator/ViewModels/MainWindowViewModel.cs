@@ -14,6 +14,7 @@ namespace Facebook.Tools.EventCreator.ViewModels
 
         private string _CsvFileLocation;
         private bool _CanCreateEvents;
+        private bool _IsAuthenticated;
         private Dictionary<string, bool> _ValidationErrorList = new Dictionary<string, bool>();
 
         #endregion
@@ -42,6 +43,18 @@ namespace Facebook.Tools.EventCreator.ViewModels
             set
             {
                 _CanCreateEvents = value;
+                OnPropertyChanged();
+            }
+        }
+        /// <summary>
+        /// Get or set whether or not the user is logged in or not
+        /// </summary>
+        public bool IsAuthenticated
+        {
+            get { return _IsAuthenticated; }
+            set
+            {
+                _IsAuthenticated = value;
                 OnPropertyChanged();
             }
         }

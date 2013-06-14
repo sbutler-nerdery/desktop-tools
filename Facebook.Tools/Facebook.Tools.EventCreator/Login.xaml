@@ -9,7 +9,6 @@
 
         <Style x:Key="BusyAnimationStyle" TargetType="Control">
             <Setter Property="Background" Value="White"/>
-
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Control">
@@ -127,7 +126,24 @@
         </Style>
     </Window.Resources>    
     <Grid>
-        <WebBrowser Name="Browser" Navigating="Browser_OnNavigating" Navigated="Browser_OnNavigated"/>
+        <WebBrowser Name="Browser" Navigating="Browser_OnNavigating" />
         <Control Name="Loader" Style="{StaticResource BusyAnimationStyle}" Visibility="Collapsed" />
+        <Grid Name="ErrorInfo" Background="White" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="1" HorizontalAlignment="Right">Error Code</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="ErrorCode">101</Label>
+            <Label Grid.Row="2" HorizontalAlignment="Right">Error Message</Label>
+            <Label Grid.Row="2" Grid.Column="1" Name="ErrorMessage">An Error Occurred</Label>
+            <Button Grid.Row="3" Grid.ColumnSpan="2" Name="Ok" Height="30" Width="100" Margin="0 0 0 10" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Ok_OnClick">OK</Button>
+        </Grid>
     </Grid>
 </Window>

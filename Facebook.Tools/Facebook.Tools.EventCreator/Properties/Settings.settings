@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="AppId" Type="System.String" Scope="User">
-      <Value Profile="(Default)">324253151015060</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="PageId" Type="System.String" Scope="User">
-      <Value Profile="(Default)">491917194219833</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="DomainUrl" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://localhost:8080</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

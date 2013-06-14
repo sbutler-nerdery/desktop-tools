@@ -25,21 +25,44 @@ namespace Facebook.Tools.EventCreator
 
         private Action<string> _Callback;
         private string _LoginUrl;
+        private string _LogoutUrl;
 
         #endregion
 
-        #region Methods
+        #region Constructors
 
         public Login()
         {
             InitializeComponent();
         }
 
-        public Login(Action<string> callback, string loginUrl)
+        public Login(Action<string> callback, string loginUrl, string logoutUrl)
             : this()
         {
             _Callback = callback;
             _LoginUrl = loginUrl;
+            _LogoutUrl = logoutUrl;
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Log the user into facebook
+        /// </summary>
+        public void LoginUser()
+        {
+            ShowAuthenticatingMode();
+            Browser.Navigate(_LoginUrl);            
+        }
+        /// <summary>
+        /// Log the user out of facebook
+        /// </summary>
+        public void LogoutUser()
+        {
+            ShowAuthenticatingMode();
+            Browser.Navigate(_LogoutUrl);            
         }
 
         private void ShowAuthenticatingMode()
@@ -55,21 +78,36 @@ namespace Facebook.Tools.EventCreator
 
         private void Login_OnLoaded(object sender, RoutedEventArgs e)
         {
-            ShowAuthenticatingMode();
-            Browser.Navigate(_LoginUrl);
+
         }
 
-        private void Browser_OnNavigated(object sender, NavigationEventArgs e)
+        private void Browser_OnNavigating(object sender, NavigatingCancelEventArgs e)
         {
             var url = e.Uri.ToString();
+
+            Logger.LogInfo("--> " + url);
 
             if (url.Contains("#access_token"))
             {
                 var token = url.Split('#')[1].Split('&')[0].Split('=')[1];
 
+                e.Cancel = true;
                 _Callback(token);
                 Hide();
             }
+            //Hide the window when an error is shown... facebook with display its own error in the browser
+            //else if (url.Contains("error_code"))
+            //{
+            //    var queryParameters = url.Split('?')[1].Split('&');
+            //    var errorCode = queryParameters.FirstOrDefault(x => x.Contains("error_code")).Split('=')[1];
+            //    var errorMessage = queryParameters.FirstOrDefault(x => x.Contains("error_message")).Split('=')[1];
+
+            //    ErrorCode.Content = errorCode;
+            //    ErrorMessage.Content = errorMessage;
+            //    ErrorInfo.Visibility = Visibility.Visible;
+            //    Loader.Visibility = Visibility.Collapsed;
+            //    Browser.Visibility = Visibility.Collapsed;
+            //}
             else
             {
                 Title = "Login";
@@ -78,11 +116,11 @@ namespace Facebook.Tools.EventCreator
             }
         }
 
-        private void Browser_OnNavigating(object sender, NavigatingCancelEventArgs e)
-        {
-            ShowAuthenticatingMode();
-        }
-
         #endregion
+
+        private void Ok_OnClick(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
     }
 }

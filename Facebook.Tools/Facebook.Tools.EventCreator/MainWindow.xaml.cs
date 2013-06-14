@@ -31,10 +31,10 @@ namespace Facebook.Tools.EventCreator
     /// </summary>
     public partial class MainWindow : Window
     {
-
         #region Fields
 
-        private const string URL_TEMPLATE = "https://www.facebook.com/dialog/oauth?client_id={0}&scope=create_event&redirect_uri={1}/somepage.html&response_type=token";
+        private const string URL_TEMPLATE = "https://www.facebook.com/dialog/oauth?client_id={0}&scope=create_event,manage_pages&redirect_uri={1}/somepage.html&response_type=token";
+        private string _LoginUrl;
         private string _AccessToken;
         private string _PageAccessToken;
         private string _DomainUrl;
@@ -42,6 +42,7 @@ namespace Facebook.Tools.EventCreator
         private string _PageId;
         private string _Data;
         private Login _LoginForm;
+        private MainWindowViewModel _ViewModel;
 
         #endregion
 
@@ -60,24 +61,28 @@ namespace Facebook.Tools.EventCreator
 
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
-            try
+            //Get setting from the app config
+            _AppId = Properties.Settings.Default.AppId;
+            _DomainUrl = Properties.Settings.Default.DomainUrl;
+            _PageId = Properties.Settings.Default.PageId;
+            _LoginUrl = string.Format(URL_TEMPLATE, _AppId, _DomainUrl);
+            _LoginForm = new Login(LoginCallback, _LoginUrl , "");
+
+            //Plugin the view model
+            _ViewModel = new MainWindowViewModel { CsvFileLocation = string.Empty };
+            DataContext = _ViewModel;
+
+            //Make sure that there are settings in place
+            if (string.IsNullOrEmpty(_AppId) || string.IsNullOrEmpty(_DomainUrl) || string.IsNullOrEmpty(_PageId))
             {
-                //Get setting from the app config
-                _AppId = Properties.Settings.Default.AppId;
-                _DomainUrl = Properties.Settings.Default.DomainUrl;
-                _PageId = Properties.Settings.Default.PageId;
-                _LoginForm = new Login(LoginCallback, string.Format(URL_TEMPLATE, _AppId, _DomainUrl));
-
-                //Plugin the view model
-                var viewModel = new MainWindowViewModel { CsvFileLocation = string.Empty };
-                DataContext = viewModel;
-
-                //Make sure that the user is logged in.
-                _LoginForm.ShowDialog();
+                var settingsForm = new Settings(SaveSettingsCallback);
+                settingsForm.ShowDialog();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.StackTrace);
+                //Make sure that the user is logged in.
+                _LoginForm.LoginUser();
+                _LoginForm.ShowDialog();
             }
         }
 
@@ -147,7 +152,7 @@ namespace Facebook.Tools.EventCreator
                                 var cell = row.Cells[j];
 
                                 //This is the data type for date? Oh well... 
-                                if(cell.CellType == CellType.NUMERIC)
+                                if (cell.CellType == CellType.NUMERIC)
                                 {
                                     var dateTime = cell.DateCellValue;
                                     cellData = dateTime.ToString("yyyy-MM-ddTHH:mm:ss-0500");
@@ -259,7 +264,7 @@ namespace Facebook.Tools.EventCreator
                             //Open a browser window with the event URL
                             System.Diagnostics.Process.Start(eventUrl);
                         };
-                        ResultLinks.Children.Add(linkButton);                        
+                        ResultLinks.Children.Add(linkButton);
                     }
                 };
 
@@ -291,6 +296,38 @@ namespace Facebook.Tools.EventCreator
             settingsForm.ShowDialog();
         }
 
+        private void LoginMenu_OnClick(object sender, RoutedEventArgs e)
+        {
+            var fb = new FacebookClient();
+            var parameters = new Dictionary<string, object>();
+            parameters.Add("access_token", _AccessToken);
+            parameters.Add("next", _LoginUrl);
+            var logoutUrl = fb.GetLogoutUrl(parameters).ToString();
+
+            if (_ViewModel.IsAuthenticated)
+            {
+                _ViewModel.IsAuthenticated = false;
+
+                _AppId = Properties.Settings.Default.AppId;
+                _DomainUrl = Properties.Settings.Default.DomainUrl;
+                _PageId = Properties.Settings.Default.PageId;
+                _LoginForm = new Login(LoginCallback, _LoginUrl, logoutUrl);
+                _LoginForm.LogoutUser();
+                _LoginForm.ShowDialog();
+            }
+            else
+            {
+                _AppId = Properties.Settings.Default.AppId;
+                _DomainUrl = Properties.Settings.Default.DomainUrl;
+                _PageId = Properties.Settings.Default.PageId;
+                _LoginForm = new Login(LoginCallback, _LoginUrl, "");
+                _LoginForm.LoginUser();
+                _LoginForm.ShowDialog();
+            }
+
+            LoginMenu.Header = _ViewModel.IsAuthenticated ? "Logout" : "Login";
+        }
+
         #endregion
 
         #endregion
@@ -305,15 +342,26 @@ namespace Facebook.Tools.EventCreator
             var json = fb.Get("/me/accounts/").ToString();
             var root = JObject.Parse(json);
 
-            var pageAccessToken =
-                root["data"].Children().FirstOrDefault(x => x["id"].ToString() == _PageId)["access_token"].ToString();
-
-            if (!string.IsNullOrEmpty(pageAccessToken))
+            try
             {
-                _PageAccessToken = pageAccessToken;
+                var pageAccessToken =
+                    root["data"].Children().FirstOrDefault(x => x["id"].ToString() == _PageId)["access_token"].ToString();
+
+                if (!string.IsNullOrEmpty(pageAccessToken))
+                {
+                    _PageAccessToken = pageAccessToken;
+                    _ViewModel.IsAuthenticated = true;
+                }
+                else
+                    ShowErrorDialog("Unable to find the specified Page ID! I can't create any events for this.");
             }
-            else
-                MessageBox.Show("Unable to find the specified Page ID! I can't create any events for this.", "Doh!", MessageBoxButton.OK, MessageBoxImage.Error);
+            catch (Exception ex)
+            {
+                Logger.LogInfo(string.Format(ex.Message + Environment.NewLine + ex.StackTrace));
+                ShowErrorDialog("You do not have permission to manage pages.");
+            }
+
+            LoginMenu.Header = _ViewModel.IsAuthenticated ? "Logout" : "Login";
         }
 
         private void SaveSettingsCallback(string appId, string pageId, string domainUrl)
@@ -321,6 +369,12 @@ namespace Facebook.Tools.EventCreator
             _AppId = appId;
             _PageId = pageId;
             _DomainUrl = domainUrl;
+            _LoginUrl = string.Format(URL_TEMPLATE, _AppId, _DomainUrl);
+        }
+
+        private void ShowErrorDialog(string message, string title = "Doh!")
+        {
+            MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         #endregion

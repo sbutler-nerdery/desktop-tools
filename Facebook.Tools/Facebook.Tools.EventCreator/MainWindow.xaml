@@ -18,6 +18,7 @@
                     <MenuItem Name="CloseMenu" Header="_Close" Click="Close_OnClick"></MenuItem>
                 </MenuItem>
                 <MenuItem Name="SettingsMenu" Header="Settings" Click="Settings_OnClick"/>
+                <MenuItem Name="LoginMenu" Header="Login" Click="LoginMenu_OnClick"/>
             </Menu>
         </Grid>
         <Grid Grid.Row="1" Margin="10 10 10 0" >
@@ -29,7 +30,7 @@
             <Button Name="BrowseForFiles" Grid.Column="1" Margin="5 0 0 0" Click="BrowseForFiles_OnClick">Browse</Button>
         </Grid>
         <Button Name="CreateEvents" Grid.Row="2" Margin="10 5 10 5" Content="Create Events" IsEnabled="{Binding Path=CanCreateEvents}" Click="CreateEvents_OnClick"/>
-        <DockPanel Grid.Row="3" Margin="10 0 10 10" Name="Loading" Height="25" Visibility="Collapsed">
+        <DockPanel Grid.Row="2" Margin="10 0 10 10" Name="Loading" Height="25" Visibility="Collapsed">
             <Label DockPanel.Dock="Left">Working</Label>
             <ProgressBar DockPanel.Dock="Right" Name="Progress" />
         </DockPanel>

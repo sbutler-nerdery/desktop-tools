@@ -25,7 +25,7 @@ namespace Facebook.Tools.EventCreator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("324253151015060")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string AppId {
             get {
                 return ((string)(this["AppId"]));
@@ -37,7 +37,7 @@ namespace Facebook.Tools.EventCreator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("491917194219833")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string PageId {
             get {
                 return ((string)(this["PageId"]));
@@ -49,7 +49,7 @@ namespace Facebook.Tools.EventCreator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string DomainUrl {
             get {
                 return ((string)(this["DomainUrl"]));
