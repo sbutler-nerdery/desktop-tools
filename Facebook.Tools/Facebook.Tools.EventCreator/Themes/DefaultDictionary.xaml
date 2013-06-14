@@ -18,4 +18,18 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="ToolTipHealine" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="0 2 0 2" />
+    </Style>
+    <Style x:Key="ToolTipTextBox" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Margin" Value="0 2 0 2" />
+    </Style>
+    <Style x:Key="ToolTipImage" TargetType="Image">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Margin" Value="20 2 0 2" />
+    </Style>
 </ResourceDictionary>

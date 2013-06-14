@@ -122,3 +122,111 @@
 --> https://www.facebook.com/dialog/oauth?redirect_uri=http:%2F%2Flocalhost:8080%2Fsomepage.html&scope=create_event%2Cmanage_pages&response_type=token&client_id=324253151015060&ret=login&ext=1371230815&hash=AeYdQNFhJbtX0jLC
 6/14/2013 11:25:51 AM-----------------------------------------
 --> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAHDR2VeMFE4hrtLbTTeCducvfU7ZBEiu7AtLsnV3ZCmg25V1fN7fZCpTinsIfKwZAuzN2gJSsHNMMPdCVpd8v2QVxCJXMzFsEIUjxGfGaSC1SbsoZAJ5EhmsjWrTFysUkYAHCBGeOQ54IlzHQ3fPZBu2RYZCxdVHgZDZD&expires_in=5585
+6/14/2013 12:56:16 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 12:56:17 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAKVZADEbfBiEJgZBbkCipTtZBNtckLUBuijj1hC813KNZBFolXCo7oVqZAZAaFPOthBnRciP35icu2rYnO3aJL1vEuIUc7XJViVpai9xYKMQk4O8CbBszeOVmkG2vRzN6W4rRT7Xzqh6hC9UaXVxn7s3yzTlBZASAZDZD&expires_in=3759
+6/14/2013 12:56:18 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 12:56:41 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 12:56:42 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAILjdLJiSDAFBZB4NEIW5TqRtMg5KBgvac6ZBEmjHOcRxOEN9ZBADzU7wZA1k8VADMhwvJPKXuWEBRHaRycM4s3dWHXZA8qzd5jmF8crxRlfDpcGmDsZChIIfwIVxf3MIqCJI1UZCHPRxTojlnaO7May8XNiztcFAZDZD&expires_in=3734
+6/14/2013 12:56:42 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 12:58:07 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 12:58:08 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAPr9MZC7CRJmGyo7B3qNtJmxtKwwlSKVDYujxFmphA1qtWnvn0XQ2vTSq5vZCgcxosMt43wjCZCKCIVWT2OD4sUfC0PRsM1WJaiKJZC6849KAuP8hihJ0aCZByi9dVOS5F8pjDaQAekcpHhp7NY1JZAwkcMvfTBgZDZD&expires_in=3648
+6/14/2013 12:58:08 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:06:22 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:06:22 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAFEGwqTT0QZBJLHsreXZAUZBBJ9ZAeXVdMxRtScwYPCy5XPNcmCnP12JYcE8IL7EDbTHZCiVzWn8NcTZCXIijHR2QY2TA3wkd2LxUpm7XlsATX9WdfNgAZCyg3AScQ9ZCvGfIRZBhh8mriZAFtKVEAVF0cNtrJgChiwQZDZD&expires_in=6754
+6/14/2013 1:06:23 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:11:54 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:11:56 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAPsE1pXE44GdZAy1qRvPlsbUDkDz8Mn9uFOhtAMezK74shosHnjEJkse53X3iEsXiovmkhvJXZB2k4Y8kBQVdab1WzZC6DNa5f4sAje65yenZA4vZAhiV5LUeaj2ZBCCFqSdoNUuMqdZAsygDeQD2ZC5rqbVfZBtXNgZDZD&expires_in=6420
+6/14/2013 1:11:56 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:15:24 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:15:24 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAOrxnDHXj09C5ZBPKSBM8w0ptDc2wltIrrzUDqPin8Oq2ozpWFBTUi652nZARWmWaCFhqsAb3H3bCxLluK1Skq9E2fZBT4a7w0vLAO9CYNUd7HBGKZAJs99S16F9vWfiOrnZBNIBJvnGaaxTFvtCpSPfDDHRnkgZDZD&expires_in=6212
+6/14/2013 1:15:25 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:20:47 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:20:48 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAP1imkCibGFrLydcHQ7cNEOwb8RfS6jrGjHm7BxFOXNZB4fGtyX0gNoyxSELhAV1NS8lzvxFUFltpyvHBXO9jdQH0ocnHnE2YTQ5nqh6spnMu6yEX58iw0GycaxZAfhPf3ZBknBfk8AUesH6c0G30bqPtTE7AZDZD&expires_in=5888
+6/14/2013 1:20:48 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:24:16 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:24:17 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBALBTFnabPpjs3jDcjsxXJTSr1s7VKIoWr0ODW7ZCPsKIng92cxvXuyWiHQtZAR8gxfUHDZCOkoIIzYf7VI8k35IWkodh3j9ghxgYYhctYAZBZBXxTJdmX86hmxZBdPH0n0GQ0GZCLhWTkv7uvo9B2wASCpYzZAyDrQZDZD&expires_in=5679
+6/14/2013 1:24:18 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:34:10 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:34:10 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBANTcEYp8eJ4AZA4O1DHaiXZBk9AdGM1dpzeDSj3cdegHbVI8vIeU1HCFfznAi4HgGoVn9KPvnfksBasVVkBbHmqrtH9rnA5XDPzABZAdQyYlI2VHn6PpBnp33cZAu8JaWPuTrmWBFZBsuLixnXfqyENzabZBwrGQZDZD&expires_in=5086
+6/14/2013 1:34:11 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:36:30 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:36:31 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAKgQN58QAbUGtxD67xQ1khVcoOCIjoGvkp545pTN3TZA8LlNbjftHZADjGPZC9ZBhZCr79qZA3zvAQAOjZBoAPvZAteNZAe361i4vxQ8EKXBNwZCukH4KOTjggDzgzS6hV9ZA9kHP2rjbSJz0zBjZBCSxoqZA2ecugssObQZDZD&expires_in=4945
+6/14/2013 1:36:31 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:37:06 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:37:07 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAIx1yjnyOW4YekQkZBkHJ1TdFbj6liBf7EVggYwrmAEzZC1JAPPGVRzX3vf64Cvmy3ldErCQrhpKhGE576sTOkHkf0CdkZC1ld44mWzm8tiGH8oskEORxwyi0YexQBP9wAUCuc1nLCalkBzksfIGlKGjrrqdwZDZD&expires_in=4909
+6/14/2013 1:37:07 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:38:51 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:38:51 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAIC2nEZAMZACrKZAZBS6FxzQJpEyMiaR3ZASBoGZAB6WBDFjbQtlCBTBeydBa8MCpcCDfpkHe1W0nobMWtJFMqVlbWcRsU9JD335KQhfASHMzkql0ty2tcS3aaVytiMXxD8AzncZAMevCQsgP9XJbuIzAL0PZBxxRwZDZD&expires_in=4805
+6/14/2013 1:38:52 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:41:10 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:41:11 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBANL7zGjQ7ZCWcmUVipTlrCrpK07UfvScZC4rAOBYOszUZBwWZCKWSv2LJZA6Yx0TTofCBKS51O93DNn7FAhsmVm4cZBgIauvZAAHZBbJRfZCxSgJjtAamU11OBSHmElhSDylY1EoKTuz4SR87hZCRx0AgDnbEYiVuT2gZDZD&expires_in=4665
+6/14/2013 1:41:11 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:41:46 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:41:46 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAFtwUHf1o5P02ZCPwoF1TCuG5ZCSlVvHeruYsqJDySPp7XZBcytaV6mpGOsibjZCyuDcGHrZATZAGaBhOzkxTNhrlw1jZCBuDrYZBnyOvoHUz3sLOK8vESQee2Obs7in29HosyLaaQLxoywPG06ZBAEkVRigI8HYJ2gZDZD&expires_in=4630
+6/14/2013 1:41:47 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:42:01 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:42:02 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBABIjy9YCPgueZAMPVVoVi1HPZBgSk0xDXUXm08iLM0rFIvWoHNISJntw2WdAMumZBqUcZARZBNd7pL4oSgxH5l6FUDoYEdHnYA9EWps6cKZBQxhMeYvh86wFEZAIkGJC5XnUSaqdnAYGGYyeGflsMfL9lrsz4bMEgZDZD&expires_in=4614
+6/14/2013 1:42:02 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:42:20 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:42:21 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBADJfqe37K5SZCqBGx6ZC3QKqzZBbZAME7kjh3Uj5c1nwjKyxB4s4nWoXiOmGa814K3GQenAo255RhiHrWxr8UutlYZB3subOaZBEYYPFv6KUFXdrKgWZASA1do9wKxH2jgLnsa407Uo90AHpgah3T87KH9yvQ8wMQZDZD&expires_in=4595
+6/14/2013 1:42:22 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:49:47 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:49:48 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAAcImtdleAzcaaGVajZCwzyj8PThBzZCwwjcCyjZAUnG2Y2OGBIAxrxIUkL8eK8vptmPrWlEAn9gSexN9BBVqVT1wfpqYrjqsDaunqORZBs9i8guznDsnHQQP8YPRi1CgweVy6Jb7hdsSm2TSbdypH3PHkZBbGgZDZD&expires_in=4148
+6/14/2013 1:49:49 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:55:16 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 1:55:16 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBALAhzU8F0m7o4JZAVUWKyHyXQlqMNEj9ugiLMLUeGJSSPQY1r5uWx0cWZCLGfz38zZCZB6Ty6KTA0JaZBmLyjhZBwJu6KwjhNCmSWcdzggguZAMZAALfMNZCr2A0TWSfw4NmrdX5cIJDOzNQgM8dzb0FbUjmxIsB1gQZDZD&expires_in=3820
+6/14/2013 1:55:17 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token

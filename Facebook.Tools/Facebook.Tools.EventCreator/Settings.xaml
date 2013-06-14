@@ -1,7 +1,9 @@
 ﻿<Window x:Class="Facebook.Tools.EventCreator.Settings"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Settings" Height="286" Width="503">
+        Title="Settings" 
+        ResizeMode="NoResize"
+        Height="286" Width="503">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
@@ -10,8 +12,10 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="265"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Label DockPanel.Dock="Left" HorizontalAlignment="Right" Content="Facebook App Id"></Label>
         <TextBox DockPanel.Dock="Right" Grid.Column="1" Width="250" Margin="0 2 0 2" Name="AppId" HorizontalAlignment="Stretch" Text="{ Binding Path=AppId, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged }" />
@@ -19,9 +23,56 @@
         <TextBox Grid.Row="1" Grid.Column="1" Width="250" Margin="0 2 0 2" Name="DomainUrl" Text="{Binding Path=DomainUrl, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged }" />
         <Label Grid.Row="2" HorizontalAlignment="Right" Content="Page Id"></Label>
         <TextBox Grid.Row="2" Grid.Column="1" Width="250" Margin="0 2 0 2" Name="PageId" Text="{Binding Path=PageId, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged }" />
-        <DockPanel Grid.Row="3" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Bottom">
+        <DockPanel Grid.Row="3" Grid.ColumnSpan="4" Height="30" VerticalAlignment="Bottom">
             <Button DockPanel.Dock="Left" Width="150" Name="Save" Content="Save" Click="Save_OnClick" IsEnabled="{Binding Path=CanSaveChanges}"></Button>
             <Button DockPanel.Dock="Right" HorizontalAlignment="Right" Width="150" Name="Cancel" Content="Cancel" Click="Cancel_OnClick"></Button>
-        </DockPanel>        
+        </DockPanel>
+        <Image Grid.Column="2" Name="HelpIconAppId" Width="25" Height="25" Source="Resources/HelpIcon.jpg"
+               ToolTipService.ShowDuration="100000" ToolTipService.HasDropShadow="True">
+            <Image.ToolTip>
+                <ToolTip >
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource ToolTipHealine}">App Id</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">1. Log into developer.facebook.com</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">2. Click the application link</TextBlock>
+                        <Image Style="{StaticResource ToolTipImage}" Source="Resources/AppLinkExample.png"></Image>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">3. Select your facebook application</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">4. Copy the App ID/API Key and paste it into this field</TextBlock>
+                        <Image Style="{StaticResource ToolTipImage}" Source="Resources/AppIdExample.png"></Image>
+                    </StackPanel>
+                </ToolTip>
+            </Image.ToolTip>
+        </Image>
+        <Image Grid.Row="1" Grid.Column="2" Name="HelpIconDomainUrl" Width="25" Height="25" Source="/Resources/HelpIcon.jpg" 
+               ToolTipService.ShowDuration="100000" ToolTipService.HasDropShadow="True">
+            <Image.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource ToolTipHealine}">Domain</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">1. Log into developer.facebook.com</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">2. Click the application link</TextBlock>
+                        <Image Style="{StaticResource ToolTipImage}" Source="Resources/AppLinkExample.png"></Image>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">3. Select your facebook application</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">4. Edit settings</TextBlock>
+                        <Image Style="{StaticResource ToolTipImage}" Source="Resources/AppSettingsExample.PNG"></Image>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">5. Use the value in the "Website with Facebook Login" site URL field.</TextBlock>
+                        <Image Style="{StaticResource ToolTipImage}" Source="Resources/DomainUrlExample.PNG"></Image>
+                    </StackPanel>
+                </ToolTip>
+            </Image.ToolTip>            
+        </Image>
+        <Image Grid.Row="2" Grid.Column="2" Name="HelpIconPageId" Width="25" Height="25" Source="/Resources/HelpIcon.jpg">
+            <Image.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource ToolTipHealine}">Page Id</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">1. Log into www.facebook.com</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">2. Open the page you want to publish events to</TextBlock>
+                        <TextBlock Style="{StaticResource ToolTipTextBox}">3. Copy the page id in the URL</TextBlock>
+                        <Image Style="{StaticResource ToolTipImage}" Source="Resources/PageIdExample.png"></Image>
+                    </StackPanel>
+                </ToolTip>
+            </Image.ToolTip>
+        </Image>
     </Grid>
 </Window>

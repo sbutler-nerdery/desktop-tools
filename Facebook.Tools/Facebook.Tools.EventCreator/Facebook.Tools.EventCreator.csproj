@@ -70,6 +70,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -150,7 +151,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\HelpIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DomainUrlExample.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AppSettingsExample.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AppLinkExample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AppIdExample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PageIdExample.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
