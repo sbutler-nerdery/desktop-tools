@@ -62,7 +62,8 @@
                 </ToolTip>
             </Image.ToolTip>            
         </Image>
-        <Image Grid.Row="2" Grid.Column="2" Name="HelpIconPageId" Width="25" Height="25" Source="/Resources/HelpIcon.jpg">
+        <Image Grid.Row="2" Grid.Column="2" Name="HelpIconPageId" Width="25" Height="25" Source="/Resources/HelpIcon.jpg"
+               ToolTipService.ShowDuration="100000" ToolTipService.HasDropShadow="True">
             <Image.ToolTip>
                 <ToolTip>
                     <StackPanel>

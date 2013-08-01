@@ -18,7 +18,8 @@
                     <MenuItem Name="CloseMenu" Header="_Close" Click="Close_OnClick"></MenuItem>
                 </MenuItem>
                 <MenuItem Name="SettingsMenu" Header="Settings" Click="Settings_OnClick"/>
-                <MenuItem Name="LoginMenu" Header="Login" Click="LoginMenu_OnClick"/>
+                <MenuItem Name="LoginMenu" Header="Login" Click="LoginMenu_OnClick" />
+                <MenuItem Name="HelpMenu" Header="Help" Click="HelpMenu_OnClick" />
             </Menu>
         </Grid>
         <Grid Grid.Row="1" Margin="10 10 10 0" >

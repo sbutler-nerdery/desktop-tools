@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Facebook.Tools.EventCreator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Windows User")]
-[assembly: AssemblyProduct("Facebook.Tools.EventCreator")]
-[assembly: AssemblyCopyright("Copyright © Windows User 2013")]
+[assembly: AssemblyCompany("Nerdery")]
+[assembly: AssemblyProduct("Create Facebook Events")]
+[assembly: AssemblyCopyright("Copyright © Nerdery 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -333,3 +333,159 @@ The process cannot access the file 'C:\Users\sbutler\Desktop\test events.xlsx' b
 --> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBANqdKZA5Rj1iiy82M6M9nwbWqF4sMZAWzDApczu0Eseshi4LELny7lpGIRkIA9dWmvzgpxcYKO4vlJV2enZCyLrt9KcqCu4rNZCbLh5eWgGdLImlcwZB5qe1TZCADZBSuBfStEwCQn2EBS3xKd9U9fKG6Jq6DmSaQZDZD&expires_in=4707
 6/14/2013 2:40:30 PM-----------------------------------------
 --> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 3:23:59 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+6/14/2013 3:23:59 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBACrPdmdsmam4ZBeqoZClmwnO1OpLx6Lqlyk1gEZAHH9x4VZB5lugZAcWhwrAcUaZC10YSJaR6o54dZCljZCMH1owBCdMHIWq5zcey63Vm9fwxqpcYFKumhaMpx5QH7tpyoInfO6g8UUsOSUTwtscpzJBG21RZAeZCEMAZDZD&expires_in=5697
+6/14/2013 3:24:00 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+7/30/2013 3:45:42 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080/somepage.html&response_type=token
+7/30/2013 3:45:43 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+7/30/2013 3:45:53 PM-----------------------------------------
+--> https://www.facebook.com/login.php?login_attempt=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin
+7/30/2013 3:45:54 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?redirect_uri=http:%2F%2Flocalhost:8080%2Fsomepage.html&scope=create_event%2Cmanage_pages&response_type=token&client_id=324253151015060&ret=login&ext=1375220760&hash=AeYdlMOET4rZvwl3
+7/30/2013 3:45:54 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAABipPUlEZAwCmUcZCQlr3Bvfvzqbee4Mvl9i0TuVtsWRiOMnpFpcsmRVAFQanSuGRwTXrIy7AGambFRsnLoEcscalw7XvStYzMfL8hBWRnNxsam83bT8TJHZCkpIvRZA1GNYXZAsz2pZBlDCT5SXQ8GhtozPjSgZDZD&expires_in=4440
+8/1/2013 12:14:13 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 12:14:14 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 12:14:27 PM-----------------------------------------
+--> https://www.facebook.com/login.php?login_attempt=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin
+8/1/2013 12:14:28 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?redirect_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html&scope=create_event%2Cmanage_pages&response_type=token&client_id=324253151015060&ret=login&ext=1375380872&hash=AeYwJkxAkeiT4bbk
+8/1/2013 12:14:28 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAIoI6KpNeCEUUDU6SnfR8YJJSHDgX66YbFPo56MmWy1klUlalqhVOzs2n5vSj2waKpa6hR7WU6Y2xxGtfi1mwLpDVMJPNmZAUEw3neHOeiSQmpGZCDZCMZAJTsRnKoHYcZAWzUP7psyLbjqfH8r37bYZBytI5eGgZDZD&expires_in=6328
+8/1/2013 12:15:36 PM-----------------------------------------
+Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at Facebook.Tools.EventCreator.MainWindow.CreateEvents_OnClick(Object sender, RoutedEventArgs e) in c:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\MainWindow.xaml.cs:line 168
+8/1/2013 12:15:47 PM-----------------------------------------
+Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at Facebook.Tools.EventCreator.MainWindow.CreateEvents_OnClick(Object sender, RoutedEventArgs e) in c:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\MainWindow.xaml.cs:line 168
+8/1/2013 12:19:23 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 12:19:24 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 12:19:32 PM-----------------------------------------
+--> https://www.facebook.com/login.php?login_attempt=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin
+8/1/2013 12:19:33 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?redirect_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html&scope=create_event%2Cmanage_pages&response_type=token&client_id=324253151015060&ret=login&ext=1375381178&hash=AeaUvuIoxjoC8hye
+8/1/2013 12:19:33 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAJpA7MjZCXS75I1ZCYYttHgWTpM6SEEmV8ZCMTWJ0gO9Ml2MpmYu84zqXX4hqwGwcgiUoDauXViteMVgesVcaI1CDe9A6ZAZBWhDHKhUlvnEUdAEGZBxc1qIW4ZBbi4EVQC8JhxIYmTOLw1shZAeGV5944MQj0EH9wZDZD&expires_in=6022
+8/1/2013 12:46:31 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 12:46:32 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 12:48:21 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 12:48:22 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 12:58:22 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 12:58:22 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAIUBYZAYuf8eXZAV0oW6mheDgIEwNDBsIsXkBJZA44J7QSxdygA8hZBYz8a6KYLCzlxLgmAGIdO6IrpccUHG9fdxhZC9HzAWyQwsX6jjlmMasZAtYj4ZAWhZA6aUHqxlwL5jM0gn2D0aZAETdshP3KFUgYABDcRMngAZDZD&expires_in=3693
+8/1/2013 12:58:23 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 12:58:34 PM-----------------------------------------
+--> https://www.facebook.com/logout.php?access_token=CAAEm6BHiMJQBAIUBYZAYuf8eXZAV0oW6mheDgIEwNDBsIsXkBJZA44J7QSxdygA8hZBYz8a6KYLCzlxLgmAGIdO6IrpccUHG9fdxhZC9HzAWyQwsX6jjlmMasZAtYj4ZAWhZA6aUHqxlwL5jM0gn2D0aZAETdshP3KFUgYABDcRMngAZDZD&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D324253151015060%26scope%3Dcreate_event%2Cmanage_pages%26redirect_uri%3Dhttp:%2F%2Flocalhost:8080%2F%2Fsomepage.html%26response_type%3Dtoken
+8/1/2013 12:58:34 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 12:58:34 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 12:58:43 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 12:58:43 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 12:58:50 PM-----------------------------------------
+--> https://www.facebook.com/login.php?login_attempt=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin
+8/1/2013 12:58:51 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?redirect_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html&scope=create_event%2Cmanage_pages&response_type=token&client_id=324253151015060&ret=login&ext=1375383536&hash=AeYaEhZLEUGXv37x
+8/1/2013 12:58:51 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAEE51geQ5KvyFIDxzCuYZBr09fUjCybJg99Tkls2ZCdLPWiflPXZCZBobjiYv45buIx3IqFnLrZAXKtYRNsuVergGxTZCCHFdbANhDtMYoY9neyBNdIIzbWZA4gxxUqf2ZAst2vBoyR2ZBB2d1dpojS7Tm012KZAl5PgZDZD&expires_in=3664
+8/1/2013 1:02:53 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:02:54 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAAmZB1TMLjTpWzHCBX8yqZA3JUjbHBparvjXYA8RzeRJQvdPcIHNZBssDxz3jgThfH6dRIrIgVNZCWxn7sdCXYkrwUJiwLorAHUJaNaxxOlVCi7n2HUdl4HiRXZCaGAn8ubhNIf2szDajP0JgKCq9VnIwZAvMjxwZDZD&expires_in=7022
+8/1/2013 1:02:54 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:13:55 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:13:56 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBANUfNRREXMzYnsjNvtiPXa3ZBqnaSH5gzyKYkIpCaKIP6NWwEmiAlriDf7YvZAzjQTqPArRMtHzGMZBlopY6cm6upZBAZAa5vHTXvereRjpmwAp6tP02ZAFw1BZBbSbofeZAD6S7wblBBr4wK3jnnaI5KsrxWk9HdAZDZD&expires_in=6360
+8/1/2013 1:13:56 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:13:57 PM-----------------------------------------
+--> https://www.facebook.com/logout.php?access_token=CAAEm6BHiMJQBANUfNRREXMzYnsjNvtiPXa3ZBqnaSH5gzyKYkIpCaKIP6NWwEmiAlriDf7YvZAzjQTqPArRMtHzGMZBlopY6cm6upZBAZAa5vHTXvereRjpmwAp6tP02ZAFw1BZBbSbofeZAD6S7wblBBr4wK3jnnaI5KsrxWk9HdAZDZD&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D324253151015060%26scope%3Dcreate_event%2Cmanage_pages%26redirect_uri%3Dhttp:%2F%2Flocalhost:8080%2F%2Fsomepage.html%26response_type%3Dtoken
+8/1/2013 1:13:58 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:13:58 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 1:14:49 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:14:49 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 1:15:44 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:15:45 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 1:16:41 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:16:42 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 1:17:27 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:17:29 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 1:17:37 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:17:38 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 1:17:49 PM-----------------------------------------
+--> https://www.facebook.com/login.php?login_attempt=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin
+8/1/2013 1:17:50 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?redirect_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html&scope=create_event%2Cmanage_pages&response_type=token&client_id=324253151015060&ret=login&ext=1375384674&hash=AeY4hwlV-ZlY-BKC
+8/1/2013 1:17:50 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAFZAvZA9zzPqgAhFrCORe7CDC2TwOZC8NZBIY3Pg2oZAhZCO7gPHQT3DFsZBL4ehQNMYopWBwpSD2Puza5lvJckemrT0smnQ8opoxqMWveVkYPKjdvOKloan1BM4ZBmMLjqBcMdYwht4THuxUbICLxxZBIaO3e3gfQAZDZD&expires_in=6126
+8/1/2013 1:17:55 PM-----------------------------------------
+--> https://www.facebook.com/logout.php?access_token=CAAEm6BHiMJQBAFZAvZA9zzPqgAhFrCORe7CDC2TwOZC8NZBIY3Pg2oZAhZCO7gPHQT3DFsZBL4ehQNMYopWBwpSD2Puza5lvJckemrT0smnQ8opoxqMWveVkYPKjdvOKloan1BM4ZBmMLjqBcMdYwht4THuxUbICLxxZBIaO3e3gfQAZDZD&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D324253151015060%26scope%3Dcreate_event%2Cmanage_pages%26redirect_uri%3Dhttp:%2F%2Flocalhost:8080%2F%2Fsomepage.html%26response_type%3Dtoken
+8/1/2013 1:17:55 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:17:55 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 1:18:00 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:18:00 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page
+8/1/2013 1:18:10 PM-----------------------------------------
+--> https://www.facebook.com/login.php?login_attempt=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin
+8/1/2013 1:18:10 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?redirect_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html&scope=create_event%2Cmanage_pages&response_type=token&client_id=324253151015060&ret=login&ext=1375384695&hash=AeZUrsLdCosOIKab
+8/1/2013 1:18:11 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAAaDmqkmqnp9o24ZAe4Yj9Cdt1LF0bQAFlCn3XE4IxUZAbROAJIcafmwULSnul9vkxtXfTZCcp1EpciPT6Yb8h9NNMTpyVAOADimdruy3ZA6BDcwArbYWy326EXIXZBFZAROA1JQgUWZATrR3HPIBvrEdUgVqAkSgZDZD&expires_in=6105
+8/1/2013 1:32:05 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:32:06 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBANdwBAvmQsm4xZB0lZBiIaAjU8qCK6TnNVCLeSPnZByxYZBRCjurnxeEH5CQFBEI5DFY2GGNuOV49kwjjv17ITCcp56TZCyHNxzin2QQdsWoT6rDYbxZBfL7zE2iJDptMb3gi4uzFeywjZCxo2pxMooZBgcPYJ4pGgZDZD&expires_in=5270
+8/1/2013 1:32:07 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:32:52 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:32:53 PM-----------------------------------------
+--> http://localhost:8080/somepage.html#access_token=CAAEm6BHiMJQBAE2bWnzWNsM1tXfhS4uahjPSgvZAZBjREXlmk1HRSGvvfzi73oiFXErj0NEszeIaPEsVIZBWDZA0RF2NZBzZAgUa4120wDOjXwyMZCjgkJJAy8P3P1YYT4ZCH7A2Gj0gFSNpMp08VYWTaD4rcayZBJrQy5fyb9SEZCJAZDZD&expires_in=5223
+8/1/2013 1:32:54 PM-----------------------------------------
+--> res://ieframe.dll/navcancl.htm#https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:32:56 PM-----------------------------------------
+--> https://www.facebook.com/logout.php?access_token=CAAEm6BHiMJQBAE2bWnzWNsM1tXfhS4uahjPSgvZAZBjREXlmk1HRSGvvfzi73oiFXErj0NEszeIaPEsVIZBWDZA0RF2NZBzZAgUa4120wDOjXwyMZCjgkJJAy8P3P1YYT4ZCH7A2Gj0gFSNpMp08VYWTaD4rcayZBJrQy5fyb9SEZCJAZDZD&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D324253151015060%26scope%3Dcreate_event%2Cmanage_pages%26redirect_uri%3Dhttp:%2F%2Flocalhost:8080%2F%2Fsomepage.html%26response_type%3Dtoken
+8/1/2013 1:32:56 PM-----------------------------------------
+--> https://www.facebook.com/dialog/oauth?client_id=324253151015060&scope=create_event,manage_pages&redirect_uri=http://localhost:8080//somepage.html&response_type=token
+8/1/2013 1:32:56 PM-----------------------------------------
+--> https://www.facebook.com/login.php?skip_api_login=1&api_key=324253151015060&signed_next=1&next=https:%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252F%252Fsomepage.html%26scope%3Dcreate_event%252Cmanage_pages%26response_type%3Dtoken%26client_id%3D324253151015060%26ret%3Dlogin&cancel_uri=http:%2F%2Flocalhost:8080%2F%2Fsomepage.html%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&display=page

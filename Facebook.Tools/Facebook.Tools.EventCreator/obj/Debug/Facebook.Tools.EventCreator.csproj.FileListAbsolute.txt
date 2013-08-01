@@ -1,9 +1,10 @@
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Facebook.Tools.EventCreator.exe.config
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Facebook.Tools.EventCreator.exe.manifest
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Facebook.Tools.EventCreator.application
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Facebook.Tools.EventCreator.exe
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Facebook.Tools.EventCreator.pdb
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Facebook.dll
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Newtonsoft.Json.dll
-C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\PresentationFramework.Aero.dll
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Facebook.xml
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\Newtonsoft.Json.xml
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Themes\DefaultDictionary.baml
@@ -19,6 +20,14 @@ C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.g.resources
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.Properties.Resources.resources
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.csproj.GenerateResource.Cache
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.TrustInfo.xml
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.exe.manifest
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.application
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.exe
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.pdb
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\PresentationFramework.Aero.dll
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator_Content.g.cs
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\HelpBox.baml
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\HelpBox.g.cs
+C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\bin\Debug\HelpPage.html
 C:\Development\Personal\desktop-tools\Facebook.Tools\Facebook.Tools.EventCreator\obj\Debug\Facebook.Tools.EventCreator.csprojResolveAssemblyReference.cache

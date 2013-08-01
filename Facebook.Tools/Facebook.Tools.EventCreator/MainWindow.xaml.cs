@@ -72,18 +72,28 @@ namespace Facebook.Tools.EventCreator
             _ViewModel = new MainWindowViewModel { CsvFileLocation = string.Empty };
             DataContext = _ViewModel;
 
+            //Disable app buttons until after the user has settings and is logged in
+            LoginMenu.IsEnabled = false;
+            BrowseForFiles.IsEnabled = false;
+
             //Make sure that there are settings in place
             if (string.IsNullOrEmpty(_AppId) || string.IsNullOrEmpty(_DomainUrl) || string.IsNullOrEmpty(_PageId))
             {
                 var settingsForm = new Settings(SaveSettingsCallback);
                 settingsForm.ShowDialog();
+
+                DisableLogin();
             }
             else
             {
                 //Make sure that the user is logged in.
                 _LoginForm.LoginUser();
                 _LoginForm.ShowDialog();
+                LoginMenu.Visibility = Visibility.Visible;
+                EnableLogin();
             }
+
+            DisableBrowse();
         }
 
         private void MainWindow_OnClosed(object sender, EventArgs e)
@@ -149,6 +159,10 @@ namespace Facebook.Tools.EventCreator
                             for (int j = 0; j < row.LastCellNum; j++)
                             {
                                 string cellData = "";
+
+                                if (row.Cells.Count < 2) continue; //this is how we avoid empty rows.
+                                if (j > 1) continue; //this will ignore any other columns in the row except the first two columns...
+
                                 var cell = row.Cells[j];
 
                                 //This is the data type for date? Oh well... 
@@ -314,6 +328,8 @@ namespace Facebook.Tools.EventCreator
                 _LoginForm = new Login(LoginCallback, _LoginUrl, logoutUrl);
                 _LoginForm.LogoutUser();
                 _LoginForm.ShowDialog();
+
+                DisableBrowse();
             }
             else
             {
@@ -326,6 +342,12 @@ namespace Facebook.Tools.EventCreator
             }
 
             LoginMenu.Header = _ViewModel.IsAuthenticated ? "Logout" : "Login";
+        }
+
+        private void HelpMenu_OnClick(object sender, RoutedEventArgs e)
+        {
+            var helpWindow = new HelpBox();
+            helpWindow.ShowDialog();
         }
 
         #endregion
@@ -351,14 +373,19 @@ namespace Facebook.Tools.EventCreator
                 {
                     _PageAccessToken = pageAccessToken;
                     _ViewModel.IsAuthenticated = true;
+                    EnableBrowse();
                 }
                 else
+                {
                     ShowErrorDialog("Unable to find the specified Page ID! I can't create any events for this.");
+                    DisableBrowse();
+                }
             }
             catch (Exception ex)
             {
                 Logger.LogInfo(string.Format(ex.Message + Environment.NewLine + ex.StackTrace));
                 ShowErrorDialog("You do not have permission to manage pages.");
+                DisableBrowse();
             }
 
             LoginMenu.Header = _ViewModel.IsAuthenticated ? "Logout" : "Login";
@@ -370,11 +397,48 @@ namespace Facebook.Tools.EventCreator
             _PageId = pageId;
             _DomainUrl = domainUrl;
             _LoginUrl = string.Format(URL_TEMPLATE, _AppId, _DomainUrl);
+            EnableLogin();
         }
 
         private void ShowErrorDialog(string message, string title = "Doh!")
         {
             MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void DisableLogin()
+        {
+            var settingsRequiredTooltip = new ToolTip
+            {
+                Content = new TextBlock { Text = "You must enter all of your Facebook settings first. Click the settings button." }
+            };
+            BrowseForFiles.ToolTip = settingsRequiredTooltip;
+            LoginMenu.IsEnabled = false;
+            LoginMenu.ToolTip = settingsRequiredTooltip;
+            LoginMenu.SetValue(ToolTipService.ShowOnDisabledProperty, true);
+        }
+
+        private void EnableLogin()
+        {
+            LoginMenu.IsEnabled = true;
+            LoginMenu.ToolTip = null;
+        }
+
+        private void DisableBrowse()
+        {
+            var loginRequiredTooltip = new ToolTip
+            {
+                Content = new TextBlock { Text = "You must log in first!" }
+            };
+
+            BrowseForFiles.IsEnabled = false;
+            BrowseForFiles.ToolTip = loginRequiredTooltip;
+            BrowseForFiles.SetValue(ToolTipService.ShowOnDisabledProperty, true);
+        }
+
+        private void EnableBrowse()
+        {
+            BrowseForFiles.IsEnabled = true;
+            BrowseForFiles.ToolTip = null;
         }
 
         #endregion
